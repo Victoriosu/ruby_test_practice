@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text: MyText
+  test_type: MyString
+  parse_date: 2024-05-22
+
+two:
+  text: MyText
+  test_type: MyString
+  parse_date: 2024-05-22

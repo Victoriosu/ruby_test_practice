@@ -6,10 +6,31 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <% content_for :head do %>
+      <%= javascript_import_module_tag "application" %>
+    <% end %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
+  <%= javascript_importmap_tags %>
+  <%= yield(:head) %>
+
   <body>
-    <%= yield %>
+    <div class="title-section">
+    <h1-c>Ruby Certification Test Practice <%= image_tag "rails.ico" %></h1-c>
+    </div>
+
+    <div class="substance-section">
+        <div class="left-section">
+          <%= render @left_section_partial %>
+        </div>
+        <div class="right-section">
+          <%= render @right_section_partial %>
+        </div>
+    </div>
+
+    <div id="console-section">
+      <% console %>
+    <div>
   </body>
 </html>
